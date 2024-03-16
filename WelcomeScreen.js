@@ -1,26 +1,15 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import MenuItems from './components/MenuItems';
 export default function WelcomeScreen() {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={welcomeScreenStyles.container}>
       <Text
-        style={{
-          padding: 20,
-          fontSize: 20,
-          color: '#EDEFEE',
-          textAlign: 'center',
-        }}>
+        style={welcomeScreenStyles.titleText}>
         Welcome to Little Lemon
       </Text>
       <Text
-        style={{
-          fontSize: 20,
-          padding: 20,
-          marginVertical: 4,
-          color: '#EDEFEE',
-          textAlign: 'center',
-        }}>
+        style={welcomeScreenStyles.paragraphText}>
         Little Lemon is a charming neighborhood bistro that serves simple food
         and classic cocktails in a lively but casual environment. We would love
         to hear your experience with us!
@@ -29,3 +18,24 @@ export default function WelcomeScreen() {
     </View>
   );
 }
+
+const welcomeScreenStyles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
+  titleText: {
+    padding: 20,
+    fontSize: 20,
+    color: '#EDEFEE',
+    textAlign: 'center',
+
+  },
+  paragraphText: {
+    fontSize: 20,
+    padding: 20,
+    marginVertical: 4,
+    color: '#EDEFEE',
+    textAlign: 'center',
+  }
+
+})
